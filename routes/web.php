@@ -24,6 +24,10 @@ Route::get('/users/{id}/{name}', function($id, $name){
 
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');
+<<<<<<< HEAD
 Route::get('/services', 'PagesController@services');
 
 Route::resource('posts', 'PostsController');
+=======
+Route::get('/services', 'PagesController@services');
+>>>>>>> 2f8b188723b26d9cfb58986548b30b8a884dbc23

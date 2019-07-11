@@ -14,7 +14,10 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about">About</a></li>
             <li><a href="/services">Services</a></li>
+<<<<<<< HEAD
             <li><a href="posts">Blog</a></li>
+=======
+>>>>>>> 2f8b188723b26d9cfb58986548b30b8a884dbc23
           </ul>
         </div><!--/.nav-collapse -->
       </div>
