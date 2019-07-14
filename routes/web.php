@@ -29,3 +29,6 @@ Route::get('/services', 'PagesController@services');
 Route::resource('posts', 'PostsController');
 Route::resource('portfolios', 'PortfoliosController');
 Route::resource('skills', 'SkillsController');
+Auth::routes();
+
+Route::get('/dashboard', 'DashboardController@index');

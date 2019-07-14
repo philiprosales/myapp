@@ -5,13 +5,15 @@
     @if(count($portfolios) > 0)
         @foreach($portfolios as $portfolio)
             <div class="well">
-                <h3><a href="/posts/{{$portfolio->id}}">{{$portfolio->title}}</a></h3>
+                <h3><a href="/portfolios/{{$portfolio->id}}">{{$portfolio->thumbnails}}</a></h3>
+                <h3>{{$portfolio->title}}</h3>
+                <h3>{{$portfolio->description}}</h3>
                 <small>Written on {{$portfolio->created_at}}</small>
             </div>
         @endforeach
-        {{$portfolios->links()}}
+        {{-- {{$portfolios->links()}} --}}
     @else
 
     @endif
-    <p>No posts found</p>
+    <p>No portfolios found</p>
 @endsection
