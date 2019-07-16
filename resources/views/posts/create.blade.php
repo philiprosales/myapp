@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <h1>Create Posts</h1>
-            <form method="POST" action="{{action('PostsController@store')}}">
+            <form method="POST" enctype="multipart/form-data" action="{{action('PostsController@store')}}">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
                 <div class="form-group">
                     <label for="">Post Name</label>
@@ -14,6 +14,10 @@
                 <div class="form-group">
                     <label for="">Body</label>
                     <textarea name="body" id="article-ckeditor" class="form-control" placeholder="Body Text"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <input type="file" name="cover_image">
                 </div>
 
                 <div class="form-group">

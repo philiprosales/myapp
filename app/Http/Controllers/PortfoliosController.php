@@ -61,6 +61,7 @@ class PortfoliosController extends Controller
         $portfolio->description = $request->input('description');
         $portfolio->embed_code = $request->input('embed_code');
         $portfolio->url = $request->input('url');
+        $portfolio->user_id = auth()->user()->id;
         $portfolio->save();
 
         return redirect('/portfolios')->with('success', 'Portfolios Created');
@@ -111,7 +112,7 @@ class PortfoliosController extends Controller
         // wala nay issue sa imong csrf
         
         // Create Portfolio
-        $portfolio = new Portfolio;
+        $portfolio = Portfolio::find($id);
         $portfolio->thumbnails = $request->input('thumbnails');
         $portfolio->title = $request->input('title');
         $portfolio->description = $request->input('description');
